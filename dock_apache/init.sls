@@ -16,7 +16,7 @@ apache:
      - image: utahdave/saltdemo
      - port_bindings:
             "80/tcp":
-                HostIp: ""
+                HostIp: "0.0.0.0"
                 HostPort: "8000"
 
 apache-container2:
@@ -32,5 +32,5 @@ apache2:
      - image: utahdave/saltdemo
      - port_bindings:
             "80/tcp":
-                HostIp: ""
+                HostIp: "0.0.0.0"
                 HostPort: "8080"
