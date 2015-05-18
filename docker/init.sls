@@ -1,3 +1,7 @@
+pip_install:
+  cmd.run:
+    - name: wget https://bootstrap.pypa.io/get-pip.py && python get-pip.py
+
 docker-python-apt:
   pkg.installed:
     - name: python-apt
@@ -8,7 +12,7 @@ docker-dependencies:
       - iptables
       - ca-certificates
       - lxc
-      - python-pip
+#      - python-pip
 
 docker-py:
   pip.installed:
@@ -32,3 +36,4 @@ lxc-docker:
 
 docker:
   service.running
+  
