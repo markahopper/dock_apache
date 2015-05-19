@@ -15,9 +15,9 @@ apache:
      - container: apache
      - image: utahdave/saltdemo
      - port_bindings:
-            "80/tcp":
-                HostIp: "0.0.0.0"
-                HostPort: "8000"
+         "80/tcp":
+             HostIp: ""
+             HostPort: "8000"
 
 apache-container2:
    docker.installed:
@@ -31,6 +31,6 @@ apache2:
      - container: apache2
      - image: utahdave/saltdemo
      - port_bindings:
-            "80/tcp":
-                HostIp: "0.0.0.0"
-                HostPort: "8080"
+         "80/tcp":
+             HostIp: ""
+             HostPort: "8080"
