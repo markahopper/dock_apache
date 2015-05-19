@@ -7,7 +7,7 @@ docker-python-apt:
     - name: python-apt
 
 docker-dependencies:
-   pkg.installed:
+  pkg.installed:
     - pkgs:
       - iptables
       - ca-certificates
@@ -20,14 +20,14 @@ docker-py:
       - pkg: docker-dependencies
 
 docker_repo:
-    pkgrepo.managed:
-      - repo: 'deb http://get.docker.io/ubuntu docker main'
-      - file: '/etc/apt/sources.list.d/docker.list'
-      - key_url: salt://docker/docker.pgp
-      - require_in:
-          - pkg: lxc-docker
-      - require:
-        - pkg: docker-python-apt
+  pkgrepo.managed:
+    - repo: 'deb http://get.docker.io/ubuntu docker main'
+    - file: '/etc/apt/sources.list.d/docker.list'
+    - key_url: salt://docker/docker.pgp
+    - require_in:
+      - pkg: lxc-docker
+    - require:
+      - pkg: docker-python-apt
 
 lxc-docker:
   pkg.latest:
@@ -36,4 +36,3 @@ lxc-docker:
 
 docker:
   service.running
-  
