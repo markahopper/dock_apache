@@ -14,7 +14,7 @@ apache:
   docker.running:
     - container: apache
     - image: utahdave/saltdemo
-    - port_bindings:
+    - ports:
         "80/tcp":
             HostIp: ""
             HostPort: "8000"
@@ -30,7 +30,7 @@ apache2:
   docker.running:
     - container: apache2
     - image: utahdave/saltdemo
-    - port_bindings:
+    - ports:
         "80/tcp":
             HostIp: ""
             HostPort: "8080"
